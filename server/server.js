@@ -16,7 +16,7 @@ async function summarizeTranscript(transcript) {
     Create very detailed notes of the below transcript with highlighting all the important information with headings and bullet points as well, remember to keep it well formatted:\n
     ${transcript}`;
 
-    const model = genAi.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAi.getGenerativeModel({ model: "gemini-flash-latest" });
     const result = await model.generateContent(prompt);
     const response = await result.response;
     return response.text();
